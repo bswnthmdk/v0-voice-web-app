@@ -9,6 +9,14 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  experimental: {
+    swcPlugins: [
+      [
+        "@swc/plugin-proposal-pipeline-operator",
+        { proposal: "hack" } // or "smart" depending on the code
+      ]
+    ]
+  }
 }
 
 export default nextConfig
